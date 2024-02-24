@@ -21,6 +21,9 @@ public class CarServicelmp implements CarService {
 
     @Override
     public List<Car> getCars(int countCar) {
+        if (countCar > cars.size()) {
+            countCar = cars.size();
+        }
         List<Car> carsReturn = new ArrayList<>();
         for (int i = 0; i < countCar; i++) {
             carsReturn.add(cars.get(i));
