@@ -13,10 +13,7 @@ public class CarServicelmp implements CarService {
             new Car("Lada", 65, 4),
             new Car("Mercedes", 10, 5)
     );
-
-    @Override
-    public void add(Car car) {
-        cars.add(car);
+    public CarServicelmp() {
     }
 
     @Override
