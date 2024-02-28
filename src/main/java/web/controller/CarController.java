@@ -14,8 +14,11 @@ import java.util.List;
 @Controller
 @RequestMapping(value = "/cars")
 public class CarController {
-    @Autowired
-    private CarService carService;
+    private final CarService carService;
+
+    public CarController(CarService carService){
+        this.carService = carService;
+    }
 
     @GetMapping
     public String printCars(@RequestParam(name = "count", required = false) Integer locale, ModelMap model) {
